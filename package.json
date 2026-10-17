@@ -1,14 +1,12 @@
 {
   "name": "view.files",
-  "version": "0.2.1",
+  "version": "1.0.0",
   "license": "Apache-2.0",
   "private": true,
   "type": "module",
-  "files": [
-    "src/views/view-files.js"
-  ],
   "scripts": {
-    "test": "node scripts/verify.mjs && python3 -m unittest discover -s test -p 'test_*.py'"
+    "test": "node scripts/verify.mjs && node scripts/test-files-default.mjs && python3 -m unittest discover -s test -p 'test_*.py'",
+    "package": "python3 scripts/release.py"
   },
   "engines": {
     "node": ">=24"

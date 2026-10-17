@@ -1,0 +1,91 @@
+{
+  "files_sha256": {
+    "src/views/files-default.js": "8adca36f46dd2fbc87c6eba5b0ee4328620dc0185eb8b467549a4e1eee7b6d40"
+  },
+  "limits": "No universal plagiarism search or legal ownership certification. Follow-history can end at file creation/copy and cannot establish upstream import version. Generated package metadata is not source provenance.",
+  "scope": "13 entry-source closures from packaging/ecosystem/ui.py (12 JavaScript Units + theme.the98); Host imports and sibling Project Units excluded. No code changes or wholesale relicensing.",
+  "source_commit": "ca48dbf190aa66e948a04d2f82a624295b7b6464",
+  "unit": {
+    "confidence": "moderate: Git attribution and closure scan; no affirmative proof every line is original",
+    "evidence": [
+      "Static import/asset closure, header/vendoring signal scan, git --follow and line-porcelain blame recorded in sources."
+    ],
+    "excluded_host_imports": [
+      {
+        "host_source": "cmd/app/src/core/runtime.js",
+        "import": "/core/runtime.js",
+        "reason": "Absolute Host package import; not in extraction closure.",
+        "sha256": "d8b20203565414d011a72c7ffa31b55e7b94a6a7e41f46a4b05b042202b4ce84"
+      },
+      {
+        "host_source": "packages/util/view-plugin.js",
+        "import": "/util/view-plugin.js",
+        "reason": "Absolute Host package import; not in extraction closure.",
+        "sha256": "d41f568dfdece1683d59d44f8f8d126bd2dcd55fad659c61eb0f84d430cb9081"
+      }
+    ],
+    "findings": "No identifiable copied third-party header, npm import, vendored library, inline artwork, remote fetch or bundled font found in Unit closure. Git authorship is not proof of copyright ownership.",
+    "kind": "view",
+    "licenses": {
+      "gams_authored_code": "Apache-2.0 (owner decision; installation by parent generator pending)",
+      "third_party": []
+    },
+    "name": "view.files-default",
+    "notices": [],
+    "release_blockers": [],
+    "sources": [
+      {
+        "blame_authors": [
+          "Rom\u0101ns Pota\u0161ovs"
+        ],
+        "earliest_followed_change": {
+          "author": "Rom\u0101ns Pota\u0161ovs",
+          "authored_at": "2026-04-14T22:43:06+03:00",
+          "commit": "d0e9deb1c9f51b57c3457345fb5e842936ec0163",
+          "email": "justgook@gmail.com",
+          "subject": "\ud83d\udea7(browser2:files): better edit and file rename"
+        },
+        "git_blob": "b08177d7e4a3f70841c4f6a4d4cb35734df0b721",
+        "history_authors": [
+          "Rom\u0101ns Pota\u0161ovs <justgook@gmail.com>"
+        ],
+        "history_count": 9,
+        "latest_change": {
+          "author": "Rom\u0101ns Pota\u0161ovs",
+          "authored_at": "2026-05-26T23:08:32+03:00",
+          "commit": "4dfb800cf593cb6c73d0aa12c9163973e25f7d86",
+          "email": "justgook@gmail.com",
+          "subject": "\ud83d\udc84(app): apply biome to all files"
+        },
+        "line_count": 152,
+        "path": "views/files-default.js",
+        "scan_signals": [],
+        "sha256": "313497a661ada365c46f4e74f4e7db3bec89aa7bbc8a76db4f2369c91762d577",
+        "source_url": "https://github.com/justgook/gamectl/blob/ca48dbf190aa66e948a04d2f82a624295b7b6464/views/files-default.js",
+        "static_imports": [
+          "/core/runtime.js",
+          "/util/view-plugin.js"
+        ],
+        "working_tree_matches_HEAD": true
+      }
+    ],
+    "upstream": []
+  },
+  "maintenance_deltas": [
+    {
+      "date": "2026-10-12",
+      "version": "0.2.1",
+      "authorization": "Owner accepted the already-prepared legal terms and explicitly authorized this bounded evidence refresh and replacement of the unpublished local v0.2.1 tag; no push or publication.",
+      "scope": "Only the current files_sha256 binding for src/views/files-default.js changes. Original audit fields, source locations, findings, licenses and historical unit.sources hashes remain historical and unchanged. This is not a new legal audit or certification.",
+      "cause": "Existing commit corrects fs/fs::stat from an array-wrapped path to the Host positional argument; original evidence was not refreshed.",
+      "source_change_commit": "3f66958f8f264bc4c187d74ab57e11ac65e2c6e5",
+      "previous_evidence_sha256": "fc30880c90f284c2f61521d3258f73ca50f87b035edcedc2bfd6cdd5f8788f9f",
+      "changed_inputs": {
+        "src/views/files-default.js": {
+          "before": "313497a661ada365c46f4e74f4e7db3bec89aa7bbc8a76db4f2369c91762d577",
+          "after": "8adca36f46dd2fbc87c6eba5b0ee4328620dc0185eb8b467549a4e1eee7b6d40"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+GAMS Project Unit: view.files-rename
+GAMS-authored code is licensed under Apache-2.0 by owner authorization.
+
+Bounded engineering inventory (not a perfect ownership/provenance assertion):
+- src/views/files-rename.js
+
+No npm dependencies are vendored. Absolute /core/, /util/, /widgets/ libraries
+are supplied separately by the Host and excluded from this ZIP. Textual icon
+ligatures and system font-family names do not bundle icon/font files.
+Sibling Project Units and their licensing remain separate.
+
+NOTICE-EVIDENCE.json SHA-256: 5a7c61e8a1f0301f4928721863604fc29521ede054defd200c07afe6077cbf6c

@@ -1,6 +1,17 @@
 {
   "files_sha256": {
-    "src/views/view-files.js": "e4ad8d01a353ebdc7ed9bcaef5c9535563878caf4e5bd3d68cb1472c8844b11a"
+    "src/views/view-files.js": "e4ad8d01a353ebdc7ed9bcaef5c9535563878caf4e5bd3d68cb1472c8844b11a",
+    "src/views/files-rename.js": "c807cfafa7ffa83d517da4abb8035f5b90494db04610e79ec85135b712fc9516",
+    "src/views/files-default.js": "8adca36f46dd2fbc87c6eba5b0ee4328620dc0185eb8b467549a4e1eee7b6d40",
+    "provenance/view.files/NOTICE": "4db24f1bc93ecf0c7ef8eaf77da70229f486041f6b6b08cfa778f549d3b1a930",
+    "provenance/view.files/NOTICE-EVIDENCE.json": "cf0370409d1bf9b5a505eba1723455c7de359ce807035bde11aa07d80c7c5169",
+    "provenance/view.files/SOURCE.json": "4371bc1519c82906221f5733b45e56aaf9539d893fd906f66e109f3ece5ef636",
+    "provenance/view.files-default/NOTICE": "1844aa6402250a60b4d86bb05e7e83f7007e211249a18605381c3deddb4afc8e",
+    "provenance/view.files-default/NOTICE-EVIDENCE.json": "eabde93fb7ae8e4d193ee1e9b375155c3461d7731b1680963d04cfac07f3d273",
+    "provenance/view.files-default/SOURCE.json": "930d7e7e526909c310825943c265a185ab11b7511126eb9d656a9a82c07a9c32",
+    "provenance/view.files-rename/NOTICE": "d6b9115e9240539c0d61bd551510feca346d2f586998c75a414caf67a7ed2a8d",
+    "provenance/view.files-rename/NOTICE-EVIDENCE.json": "5a7c61e8a1f0301f4928721863604fc29521ede054defd200c07afe6077cbf6c",
+    "provenance/view.files-rename/SOURCE.json": "177ae0e97cf045fa97310aa5fb1d3ff412ce8cf0291ef2c5a609a5764009494a"
   },
   "limits": "No universal plagiarism search or legal ownership certification. Follow-history can end at file creation/copy and cannot establish upstream import version. Generated package metadata is not source provenance.",
   "scope": "13 entry-source closures from packaging/ecosystem/ui.py (12 JavaScript Units + theme.the98); Host imports and sibling Project Units excluded. No code changes or wholesale relicensing.",
@@ -70,5 +81,27 @@
       }
     ],
     "upstream": []
-  }
+  },
+  "maintenance_deltas": [
+    {
+      "scope": "Owner-requested consolidation of three View repositories into view.files. Source bytes, deployment paths and license terms are unchanged. Original audit records are preserved under provenance/; original unit fields above describe only the historical view.files audit. This is not a new legal audit or publication approval.",
+      "inputs": [
+        {
+          "repository": "view.files",
+          "commit": "8d6805ed54c4144ef922b86f687bf052f929c64b",
+          "evidence": "provenance/view.files/NOTICE-EVIDENCE.json"
+        },
+        {
+          "repository": "view.files-rename",
+          "commit": "9062ff979bbe5dae52004aff400d91b1558ab950",
+          "evidence": "provenance/view.files-rename/NOTICE-EVIDENCE.json"
+        },
+        {
+          "repository": "view.files-default",
+          "commit": "36d21c0dbe20d785f402c3c3ef0d9fba4962b8a2",
+          "evidence": "provenance/view.files-default/NOTICE-EVIDENCE.json"
+        }
+      ]
+    }
+  ]
 }

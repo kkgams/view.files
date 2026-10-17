@@ -1,0 +1,81 @@
+{
+  "files_sha256": {
+    "src/views/files-rename.js": "c807cfafa7ffa83d517da4abb8035f5b90494db04610e79ec85135b712fc9516"
+  },
+  "limits": "No universal plagiarism search or legal ownership certification. Follow-history can end at file creation/copy and cannot establish upstream import version. Generated package metadata is not source provenance.",
+  "scope": "13 entry-source closures from packaging/ecosystem/ui.py (12 JavaScript Units + theme.the98); Host imports and sibling Project Units excluded. No code changes or wholesale relicensing.",
+  "source_commit": "ca48dbf190aa66e948a04d2f82a624295b7b6464",
+  "unit": {
+    "confidence": "moderate: Git attribution and closure scan; no affirmative proof every line is original",
+    "evidence": [
+      "Static import/asset closure, header/vendoring signal scan, git --follow and line-porcelain blame recorded in sources."
+    ],
+    "excluded_host_imports": [
+      {
+        "host_source": "cmd/app/src/core/runtime.js",
+        "import": "/core/runtime.js",
+        "reason": "Absolute Host package import; not in extraction closure.",
+        "sha256": "d8b20203565414d011a72c7ffa31b55e7b94a6a7e41f46a4b05b042202b4ce84"
+      },
+      {
+        "host_source": "packages/util/view-plugin.js",
+        "import": "/util/view-plugin.js",
+        "reason": "Absolute Host package import; not in extraction closure.",
+        "sha256": "d41f568dfdece1683d59d44f8f8d126bd2dcd55fad659c61eb0f84d430cb9081"
+      },
+      {
+        "host_source": "packages/util/files-create-path.js",
+        "import": "/util/files-create-path.js",
+        "reason": "Absolute Host package import; not in extraction closure.",
+        "sha256": "9ed01be680675f18bc3d53090d58b6256099a246953276f71e651cc43f5c2b21"
+      }
+    ],
+    "findings": "No identifiable copied third-party header, npm import, vendored library, inline artwork, remote fetch or bundled font found in Unit closure. Git authorship is not proof of copyright ownership.",
+    "kind": "view",
+    "licenses": {
+      "gams_authored_code": "Apache-2.0 (owner decision; installation by parent generator pending)",
+      "third_party": []
+    },
+    "name": "view.files-rename",
+    "notices": [],
+    "release_blockers": [],
+    "sources": [
+      {
+        "blame_authors": [
+          "Rom\u0101ns Pota\u0161ovs"
+        ],
+        "earliest_followed_change": {
+          "author": "Rom\u0101ns Pota\u0161ovs",
+          "authored_at": "2026-04-14T22:43:06+03:00",
+          "commit": "d0e9deb1c9f51b57c3457345fb5e842936ec0163",
+          "email": "justgook@gmail.com",
+          "subject": "\ud83d\udea7(browser2:files): better edit and file rename"
+        },
+        "git_blob": "5b76fdb5e9b807b3cddc7503e38df2921541991b",
+        "history_authors": [
+          "Rom\u0101ns Pota\u0161ovs <justgook@gmail.com>"
+        ],
+        "history_count": 12,
+        "latest_change": {
+          "author": "Rom\u0101ns Pota\u0161ovs",
+          "authored_at": "2026-08-16T00:07:40+03:00",
+          "commit": "b9aebe511505e56a86b0442e9515156fbcce26af",
+          "email": "justgook@gmail.com",
+          "subject": "\u2728(view:files): better file / folder creation"
+        },
+        "line_count": 325,
+        "path": "views/files-rename.js",
+        "scan_signals": [],
+        "sha256": "c807cfafa7ffa83d517da4abb8035f5b90494db04610e79ec85135b712fc9516",
+        "source_url": "https://github.com/justgook/gamectl/blob/ca48dbf190aa66e948a04d2f82a624295b7b6464/views/files-rename.js",
+        "static_imports": [
+          "/core/runtime.js",
+          "/util/view-plugin.js",
+          "/util/files-create-path.js"
+        ],
+        "working_tree_matches_HEAD": true
+      }
+    ],
+    "upstream": []
+  }
+}

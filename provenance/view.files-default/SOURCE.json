@@ -1,0 +1,57 @@
+{
+  "files_sha256": {
+    ".github/workflows/release.yml": "389609993160480e4ff9a918e5ce91c2967207b3120cff633902d9c657e30b39",
+    ".gitignore": "eb23201bf8045bae97d6f115436fbeceb52a080b218644bf1b15f92b9da8dd4e",
+    "CONTEXT.md": "98d248c1248c7777321cb6ce7a2e34af11391074ca34fc9819fba6f389846b80",
+    "LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "LICENSING.md": "d4fd2edc5d99638f92d514cfa5c210d893e65f109a3640717eec4978ad2f849b",
+    "NOTICE": "104f1184f5631e863a3d898d8e25580702a52f5c290544bb94bc26b65d2e026a",
+    "NOTICE-EVIDENCE.json": "fc30880c90f284c2f61521d3258f73ca50f87b035edcedc2bfd6cdd5f8788f9f",
+    "PUBLISHING.md": "bd53609e046de8dffc3d281d2bff686cdd58439bf853617b0c2fde0478e63458",
+    "README.md": "dfa58bfa953b282a4e98ec336f7619cec4ac68c240fdc3de290dd85207bbb0c3",
+    "package.json": "fc757062db001a3ad537c5e8676293b7a801cb724543b21243db82839d797ba7",
+    "release.json": "2397f5aeb4f97ea8837acefbb59f98c988ba207bea825a4903a92cd00fc3e4d7",
+    "scripts/release.py": "45e25fd41691c02c8487ac9365cd74e5cb3c4ea8f602005ab764438e25b90be8",
+    "scripts/verify.mjs": "d05cc6613fd971c2c273cf59c7926da47bfc153b52571c36ab0455b9ae2aa094",
+    "src/views/files-default.js": "313497a661ada365c46f4e74f4e7db3bec89aa7bbc8a76db4f2369c91762d577",
+    "test/test_release.py": "330586a32413735fdaf28df1071ff8ddd16a7b020fdfa1af92849a277faf80da"
+  },
+  "maintenance": {
+    "audit_recipe_sha256": "f6f9d9850d8137ce4e359899faca7cf56968ad4e2ec10e835181cd476987bdde",
+    "changed_inputs": {
+      "PUBLISHING.md": {
+        "after": "0fcf31ade99cef76618e81a20ae525c21ebc0374ffb75ae37c14c2dcd7c40719",
+        "before": "bd53609e046de8dffc3d281d2bff686cdd58439bf853617b0c2fde0478e63458"
+      },
+      "README.md": {
+        "after": "a437eba1c5da03b62f8af0a3dde0897d6769be9821953b31618a4341a408e225",
+        "before": "dfa58bfa953b282a4e98ec336f7619cec4ac68c240fdc3de290dd85207bbb0c3"
+      },
+      "package.json": {
+        "after": "d25ee9638590ad563969b2dd81dd9564e267da1ef0ebfa29948e3d8b9f313097",
+        "before": "fc757062db001a3ad537c5e8676293b7a801cb724543b21243db82839d797ba7"
+      },
+      "test/test_release.py": {
+        "after": "26747a6c445eb5656d92fadc5e6793a75b83072c76ccf21ce0c16bfc003ce0f1",
+        "before": "330586a32413735fdaf28df1071ff8ddd16a7b020fdfa1af92849a277faf80da"
+      }
+    },
+    "original_source_sha256": "d09b3b3c3de26ac70089430c13d048719efc815ac08e208cc9b393ea7d10d7c0",
+    "preserved_legal": {
+      "LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "NOTICE": "104f1184f5631e863a3d898d8e25580702a52f5c290544bb94bc26b65d2e026a",
+      "NOTICE-EVIDENCE.json": "fc30880c90f284c2f61521d3258f73ca50f87b035edcedc2bfd6cdd5f8788f9f"
+    },
+    "previous_commit": "aaf3ed19c097ccd203cc8a8809e4f8abb9d74222",
+    "releaseReady": false,
+    "schema": 1,
+    "scope": "Additional standalone metadata and bounded test-fixture proof; original SOURCE fields remain historical, not current-tree provenance. Does not replace any existing release/legal gates.",
+    "version": "0.2.0"
+  },
+  "publication_preparation_source_revision": "ca48dbf190aa66e948a04d2f82a624295b7b6464",
+  "repository": "view.files-default",
+  "snapshot_kind": "working-tree source snapshot; no history rewritten",
+  "source_base_revision": "01bbfb1cb07bca898b86e7127cf433d2d23aaf7e",
+  "source_repository": "https://github.com/justgook/gamectl",
+  "source_worktree_status": []
+}

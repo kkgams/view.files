@@ -1,18 +1,16 @@
-# Context: view.files
+# view.files
 
-## Responsibility
+This repository owns three GAMS Views, released in one archive: `view-files`
+(`views/view-files.js`), `files-rename` (`views/files-rename.js`) and
+`files-default` (`views/files-default.js`). Each is registered separately in
+Project Config. `src/` owns deployment files; packaging strips that prefix.
+The Host supplies `/core`, `/util`, `/widgets`, styling and runtime services.
+Filesystem and UI Service dependencies remain separate.
 
-This repository owns exactly one View Project Unit entry and any recursively
-required repository-local assets. It does not own the GAMS Host, runtime, shared
-`/core`, `/util`, or `/widgets` APIs, or sibling Project Units.
+GitHub Releases distribute ZIPs, not npm packages. Documentation uses
+justgook/wiki v1.4.0 locally and on GitHub Pages. A maintainer commit constitutes
+approval; its matching version tag triggers publication. No approval-digest
+variables or special release branch are required. No `unit.json` is generated.
 
-## Boundary
-
-- Project deployment path: `views/view-files.js`.
-- Absolute Host imports remain absolute and are supplied by GAMS.
-- Dependencies on separately configured views/services stay separate.
-
-## Maturity
-
-Initial station-showcase extraction slice. Host/config contracts are prerelease and
-may change before public ecosystem release.
+Original extraction records remain historical, not build/release gates; see
+NOTES.md. The imported View source behavior and deployment paths are unchanged.
