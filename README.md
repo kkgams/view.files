@@ -10,25 +10,35 @@ File browser and two popup Views, maintained and released together:
 
 Requires a compatible GAMS Host, `plugin.fs`, `ui.popup` and `ui.toast`.
 The Host supplies browser APIs, `/core`, `/util`, `/widgets` and theme styling.
-This repository is not a standalone Host or external Project.
+The local `gams.json` opens these Views in the real Host; this repository does not own the Host.
 
 ## Develop
 
-Requires Node.js 24+, Python 3 (stdlib), Make, curl and tar; no npm install needed.
+Requires Node.js 24+, Python 3 (stdlib), Make, curl, tar and unzip; no npm install needed.
 
 ```sh
 npm test
+make open                      # current local gams.json in tools/gams.app
 make validate-docs
-make serve-docs                 # http://localhost:8080
-make build-docs                 # portable wiki under build/site/
+make serve-docs                 # http://localhost:8080; DOCS_PORT overrides
+make docs                       # portable wiki under build/site/
 npm run package                # one ZIP and SHA256SUMS under dist/
 ```
 
 The wiki uses justgook/wiki v1.4.0, cached under ignored `build/`.
 Enable GitHub Pages with **Settings → Pages → Source → GitHub Actions** to deploy
-docs on default-branch pushes. The [overview](docs/index.md) explains the Views.
+docs on every push to `release` via `make docs`. The [overview](docs/index.md) explains the Views.
 Local tests cover syntax/import closure, fallback metadata, archive contents,
 checksums and reproducibility, not native Host integration or theme rendering.
+
+The View source loads directly from `src/`; no compilation is required.
+`make tools/gams.app` downloads the released macOS Apple Silicon Host only when
+absent, preserving its notices. `make open` explicitly sets `GAMS_APP_CWD` to
+this repository; no sibling checkout is required. Keep macOS security checks intact.
+Published dependencies are pinned in `gams.json` and cached under ignored
+`gams_modules/`. First launch needs network access.
+
+`build-docs` remains an alias for `make docs`.
 
 ## Install
 
@@ -76,12 +86,13 @@ For later releases, start from a clean checkout with changes committed:
 
 ```sh
 npm test
+make open                      # current local gams.json in tools/gams.app
 make validate-docs
 npm version patch -m '🔖(view.files): release v%s'  # or minor / major
 git push origin HEAD --follow-tags
 ```
 
-Branch pushes run checks and deploy default-branch docs, not Unit releases.
+Branch pushes run checks; pushes to `release` deploy docs, not Unit releases.
 See [PUBLISHING.md](PUBLISHING.md) for release boundaries.
 
 ## License

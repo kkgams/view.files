@@ -3,3 +3,7 @@ build/
 dist/
 node_modules/
 __pycache__/
+
+# Documentation output, downloaded Host and Project dependency cache.
+tools/
+gams_modules/

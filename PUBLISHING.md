@@ -17,4 +17,4 @@ with its entry fragment from the same new archive. Never install the old popup
 archives alongside it, because deployment paths overlap.
 
 GitHub Pages must use GitHub Actions as its source to deploy the minimal wiki
-on default-branch pushes. Local packaging does not require Pages configuration.
+on every push to `release` via `make docs`. Local packaging does not require Pages configuration.
