@@ -1,9 +1,4 @@
 .DS_Store
-build/
-dist/
-node_modules/
-__pycache__/
-
-# Documentation output, downloaded Host and Project dependency cache.
+build.nosync/
 tools/
 gams_modules/
