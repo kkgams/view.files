@@ -25,7 +25,7 @@ Requires Make, Node.js 24+, Python 3 (stdlib), Git, curl, tar, unzip, zip and sh
 | --- | --- |
 | `make open` | Open local `gams.json` in the released Host; download only if absent (macOS Apple Silicon) |
 | `make tools/gams.app` | Download the Host and accompanying notices |
-| `make test` | Check View syntax and the fallback metadata filesystem-call regression |
+| `make test` | Check View syntax, fallback metadata and file/folder rename regressions |
 | `make package` | Build incremental `build.nosync/view.files.zip` and `SHA256SUMS` |
 | `make serve-docs` | Preview the pinned wiki; `DOCS_PORT` defaults to 8080 |
 | `make docs` | Build the wiki into `build.nosync/site/` |

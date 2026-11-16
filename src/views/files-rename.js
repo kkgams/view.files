@@ -48,18 +48,18 @@ async function pathExists(path) {
 }
 
 async function renameFile(sourcePath, targetPath) {
-  unwrap(await callFs("rename", sourcePath, targetPath))
+  await callFs("rename", sourcePath, targetPath)
 }
 
 async function renameDirectory(sourcePath, targetPath) {
   await callFs("create-dir", targetPath)
 
-  const files = unwrap(await callFs("list", sourcePath))
+  const files = await callFs("list", sourcePath)
 
   for (const { name } of files) {
     const sourceChildPath = joinPath(sourcePath, name)
     const targetChildPath = joinPath(targetPath, name)
-    const stat = unwrap(await callFs("stat", sourceChildPath))
+    const stat = await callFs("stat", sourceChildPath)
 
     if (stat.type === "directory") {
       await renameDirectory(sourceChildPath, targetChildPath)
