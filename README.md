@@ -25,6 +25,6 @@ Requires Make, Node.js 24+, Python 3 (stdlib), Git, curl, tar, unzip, zip and sh
 | `make serve-docs` | Preview the pinned wiki; `DOCS_PORT` defaults to 8080 |
 | `make docs` | Build the wiki into `build.nosync/site/` |
 | `make validate-docs` | Validate wiki content |
-| `make clean` | Remove `build.nosync/`, marked Host/notices and configured completed Unit caches; preserve supplied/unrelated files; refuse unidentified targets, tracked files or symlinks |
+| `make clean` | Remove all of `build.nosync/`, `tools/` and `gams_modules/`, without ownership markers; refuse tracked files or symlinks in deletion paths before deleting anything. |
 
 First launch needs network access. Existing Host downloads are not updated implicitly; macOS security checks remain intact. Build output, temporary downloads and the pinned justgook/wiki v1.4.0 engine stay under ignored `build.nosync/`. Tests do not establish native Host integration or theme rendering.
