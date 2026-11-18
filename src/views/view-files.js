@@ -87,6 +87,7 @@ export class ViewFiles extends HTMLElement {
         this.expandedPaths = new Set()
         this.selectedPath = null
         this.selectedPaths = new Set()
+        this.deletePending = false
         this.fileTree = new Map()
         this.tableElement = null
         this.footerElement = null
@@ -349,7 +350,7 @@ export class ViewFiles extends HTMLElement {
 
         const deleteButton = this._headerControlsElement.querySelector('[data-action="delete"]')
         if (deleteButton instanceof HTMLButtonElement) {
-            deleteButton.disabled = !canManageEntries || !this.selectedPath
+            deleteButton.disabled = !canManageEntries || !this.selectedPath || this.deletePending
         }
 
         this.updateFooterUI()
@@ -863,21 +864,27 @@ export class ViewFiles extends HTMLElement {
     }
 
     async deleteSelected() {
-        if (!this.selectedPath) return
+        if (!this.selectedPath || this.deletePending) return
         const entry = this.getEntry(this.selectedPath)
         assert(entry, `view-files selected path not found: ${this.selectedPath}`)
 
-        const confirmed = await this.confirmDelete(entry)
-        if (!confirmed) return
+        this.deletePending = true
+        try {
+            this.updateHeaderControlsUI()
+            if (!(await this.confirmDelete(entry))) return
 
-        this.setStatus(`Deleting ${entry.path}...`, "info")
-        await this.deletePathRecursive(entry.path)
+            this.setStatus(`Deleting ${entry.path}...`, "info")
+            await this.deletePathRecursive(entry.path)
 
-        this.selectedPath = null
-        this.selectedPaths.clear()
-        this.fileTree.clear()
-        this.removeExpandedPathTree(entry.path)
-        await this.refresh()
+            this.selectedPath = null
+            this.selectedPaths.clear()
+            this.fileTree.clear()
+            this.removeExpandedPathTree(entry.path)
+            await this.refresh()
+        } finally {
+            this.deletePending = false
+            this.updateHeaderControlsUI()
+        }
     }
 
     getParentDirectoryPath(path) {
